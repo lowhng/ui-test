@@ -3,4 +3,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="colorPopoutButtonGreen">#268A2C</color>
+    <color name="colorPopoutGreen">#C5FF9E</color>
+    <color name="colorWhite">#FFFFFF</color>
 </resources>

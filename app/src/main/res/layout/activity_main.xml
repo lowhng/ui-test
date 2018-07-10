@@ -9,39 +9,66 @@
     tools:context=".MainActivity">
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/header"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteY="12dp">
+        app:layout_constraintBottom_toTopOf="@+id/firstPanel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.13999999"
+        app:layout_constraintVertical_weight="3">
 
         <TextView
             android:id="@+id/welcomeTxt"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/welcome_msg"
+            android:textAlignment="center"
             android:textSize="16sp"
-            android:textStyle="normal" />
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profileImg"
             android:layout_width="120dp"
             android:layout_height="120dp"
             android:layout_gravity="center"
-            android:src="@drawable/starwarscoffee" />
+            android:layout_marginBottom="3dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/starwarscoffee"
+            app:layout_constraintBottom_toTopOf="@+id/tenantNameTxt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcomeTxt"
+            app:layout_constraintVertical_bias="0.85" />
 
         <TextView
             android:id="@+id/tenantNameTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
             android:gravity="center"
             android:padding="10dp"
             android:text="@string/tenant_name"
             android:textSize="25sp"
-            android:textStyle="bold" />
-    </LinearLayout>
+            android:textStyle="bold"
+            app:layout_constraintTop_toBottomOf="@+id/profileImg"
+            tools:layout_editor_absoluteX="0dp" />
+    </android.support.constraint.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/firstPanel"
@@ -52,7 +79,8 @@
         android:background="@drawable/yellow_rect"
         android:gravity="center"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/secondPanel"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintVertical_weight="1"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
@@ -137,6 +165,8 @@
         android:gravity="center"
         android:orientation="vertical"
         app:layout_constraintBottom_toTopOf="@+id/mainGrid"
+        app:layout_constraintTop_toBottomOf="@+id/firstPanel"
+        app:layout_constraintVertical_weight="1"
         tools:layout_editor_absoluteX="0dp">
 
         <LinearLayout
@@ -225,10 +255,13 @@
         android:padding="5dp"
         android:rowCount="1"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secondPanel"
+        app:layout_constraintVertical_weight="2"
         tools:layout_editor_absoluteX="0dp">
 
 
         <android.support.v7.widget.CardView
+            android:id="@+id/paymentCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"
@@ -269,6 +302,7 @@
 
 
         <android.support.v7.widget.CardView
+            android:id="@+id/detailsCard"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_columnWeight="1"

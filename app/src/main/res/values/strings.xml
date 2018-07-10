@@ -6,4 +6,6 @@
     <string name="usage_month">Usage (Month):</string>
     <string name="savings_month">Total Savings (Month):</string>
     <string name="savings_total">Total Savings so far:</string>
+    <string name="payment_dialog_msg">Your outstanding bill amounts to: </string>
+    <string name="payment_btn_text">PROCEED</string>
 </resources>
