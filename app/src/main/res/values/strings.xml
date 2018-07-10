@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">UITest</string>
+    <string name="tenant_name">STAR WARS COFFEE</string>
+    <string name="welcome_msg">Welcome!</string>
+    <string name="usage_day">Usage (Day):</string>
+    <string name="usage_month">Usage (Month):</string>
+    <string name="savings_month">Total Savings (Month):</string>
+    <string name="savings_total">Total Savings so far:</string>
+</resources>
